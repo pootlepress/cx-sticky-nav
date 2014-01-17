@@ -69,15 +69,15 @@ class Pootlepress_Sticky_Nav {
 				);
 		$o[] = array(
 				'id' => 'pootlepress-sticky-nav-option', 
-				'name' => __( 'Enable or Disable Sticky Nav', 'pootlepress-sticky-nav' ), 
-				'desc' => __( 'Click here to enable or disable the Pootlepress sticky nav', 'pootlepress-sticky-nav' ), 
+				'name' => __( 'ticky Nav', 'pootlepress-sticky-nav' ), 
+				'desc' => __( 'Enable sticky nav', 'pootlepress-sticky-nav' ), 
 				'std' => 'true',
 				'type' => 'checkbox'
 				);
 		$o[] = array(
 				'id' => 'pootlepress-sticky-nav-wpadminbar', 
-				'name' => __( 'Enable or Disable the Wordpress Admin Bar', 'pootlepress-sticky-nav' ), 
-				'desc' => __( 'Click here to enable or disable the Wordpress Admin Bar. The Wordpress admin bar can hide the sticky nav.', 'pootlepress-sticky-nav' ), 
+				'name' => __( 'Wordpress Admin Bar', 'pootlepress-sticky-nav' ), 
+				'desc' => __( 'Disable the Wordpress Admin Bar (so the Wordpress admin bar will not hide the sticky nav).', 'pootlepress-sticky-nav' ), 
 				'std' => 'true',
 				'type' => 'checkbox'
 				);
