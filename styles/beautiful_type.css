@@ -1,0 +1,129 @@
+#nav-container{
+	border:none!important;
+	margin-bottom:0px!important;
+}
+
+body #navigation_beautiful_type {
+	/* width: 800px; */
+	background: #fff;
+	border: 0;
+	margin: 0 auto 20px!important;
+	}
+body #navigation_beautiful_type ul{
+	padding:0.9em 0;
+}
+body #navigation_beautiful_type li{
+	list-style: none;
+	float: left;
+	margin-right: 2px;
+	}
+body #navigation_beautiful_type li a{
+	display: block;
+	font-size: 18px;
+	/* padding: 0px 15px; */
+	line-height: 30px;
+	color: #151215;
+	text-decoration: none;
+	padding:0px!important;
+	} 
+body #navigation_beautiful_type li a:hover{
+	color: #fff;
+	background:#2e2e2f;
+	height:30px;
+	}
+
+body #navigation_beautiful_type li span{
+	display: block;
+	font-size: 18px;
+	padding: 0px 15px;
+	line-height: 30px;
+	color: #151215;
+	text-decoration: none;
+	}	
+
+body #navigation_beautiful_type li span:hover{
+	background: url(images/menu-hover.png) no-repeat center bottom;
+	z-index: 99999;
+	color: #fff;
+	/* padding: 0 0 10px; */
+	padding-bottom:12px;
+	}
+	
+/* .current_page_item{	
+	background: url(images/menu-hover.png) no-repeat center bottom;
+	z-index: 99999;
+	color: #fff;
+	padding-bottom:12px;
+	} */
+	
+	
+body #navigation_beautiful_type li.current_page_item span{
+	background: url(images/menu-hover.png) no-repeat center bottom;
+	z-index: 99999;
+	color: #fff;
+	/* padding: 0 0 10px; */
+	padding-bottom:12px;
+	}	
+	
+	
+body #navigation_beautiful_type li.current_page_item a{
+	color: #fff;
+	background:#2e2e2f;
+	height:30px;
+	}	
+
+
+	body #navigation_beautiful_type ul.sub-menu li + li{
+    	margin-left: 0px;
+    	}	
+	body #navigation_beautiful_type ul.sub-menu li{
+    	float:left;
+		width: 100%;
+		background:#FFF;
+    	}	
+	body #navigation_beautiful_type ul.sub-menu li:hover{
+    	background:#000;
+    	}			
+	body #navigation_beautiful_type ul.sub-menu{
+    	width:100%;
+		/* background:#fff; */
+    	}
+	body #navigation_beautiful_type ul.sub-menu li a{
+    	text-decoration:none;
+    	}
+	body #navigation_beautiful_type ul.sub-menu li span:hover{
+		background: none;
+		z-index: 99999;
+		color: #fff;
+		/* padding: 0 0 10px; */
+		padding-bottom:12px;
+		}	
+
+	body #navigation_beautiful_type ul.sub-menu li span{
+		background:none;
+		z-index: 99999;
+		color: #151215;
+
+	}			
+
+	
+@media only screen and (max-width: 767px) {
+
+	#navigation_beautiful_type{
+		display:none;
+	}
+		
+}
+
+
+@media only screen and (min-width: 767px) {
+	#navigation{
+		/* visibility: hidden;
+		height: 10px; */
+		display: none !important;
+	}
+
+	#nav1{
+		display: none !important;
+	}
+}		

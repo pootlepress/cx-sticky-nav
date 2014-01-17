@@ -1,0 +1,118 @@
+#header-container{
+	padding:0!important;
+}
+
+#nav-container{
+	border:none!important;
+	padding:0!important;
+	
+}
+
+body #navigation_header{
+	/* position: absolute; */
+	left: 0;
+	bottom: 0;
+	/* padding-left: 23px; */
+}
+
+body #navigation_header ul {
+	width: 100%;
+	/* overflow: hidden; */
+	margin:0 20px;
+}
+
+#logo{
+	margin:0 20px;
+}
+
+body #navigation_header ul li {
+	float: left;
+	padding: 0 23px 0 20px;
+	background: url(images/line-main-menu.gif) no-repeat 0 3px;
+	height: 32px;
+}
+
+body #navigation_header ul li:first-child {
+	background: none;
+	padding-left: 0;
+}
+
+/* body #navigation_header ul li a {
+	float: left;
+	height: 32px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(images/btn-main-menu.gif) no-repeat;
+} */
+
+body #navigation_header ul li a {
+	padding:0px!important;
+}
+
+body #navigation_header ul li a:hover,
+body #navigation_header ul li.active a {
+	border-bottom: 7px solid #000;
+	height: 25px;
+}
+
+ul.nav li.current_page_item a,
+ul.nav li.current_page_parent a,
+ul.nav li.current-menu-ancestor a,
+ul.nav li.current-cat a,
+ul.nav li.current-menu-item a {
+  background: none!important;
+  color: #000!important;
+}
+
+body #navigation_header ul li.current_page_item a{
+	border-bottom: 7px solid #000;
+	height: 25px;
+}
+
+#header{
+	background:url('images/bg-header-146.gif') !important;
+	padding:40px 0 45px!important;
+}
+
+#navigation_header{
+	background:url('images/bg-header-146.gif');
+	margin-bottom: 20px;
+}
+
+	body #navigation_header ul.sub-menu li + li{
+    	margin-left: 0px;
+    	}	
+	body #navigation_header ul.sub-menu li{
+    	float:left;
+		padding-left:5px;
+		background:none;
+    	}		
+	body #navigation_header ul.sub-menu{
+    	width:100%;
+		background:#fff;
+    	}
+	body #navigation_header ul.sub-menu li a{
+    	text-decoration:none;
+    	}
+
+
+
+@media only screen and (max-width: 767px) {
+
+	#navigation_header{
+		display:none;
+	}
+		
+}
+
+@media only screen and (min-width: 767px) {
+	#navigation{
+		/* visibility: hidden;
+		height: 10px; */
+		display: none !important;
+	}
+
+	#nav1{
+		display: none !important;
+	}
+}
