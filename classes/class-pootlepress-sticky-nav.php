@@ -69,7 +69,7 @@ class Pootlepress_Sticky_Nav {
 				);
 		$o[] = array(
 				'id' => 'pootlepress-sticky-nav-option', 
-				'name' => __( 'ticky Nav', 'pootlepress-sticky-nav' ), 
+				'name' => __( 'Sticky Nav', 'pootlepress-sticky-nav' ), 
 				'desc' => __( 'Enable sticky nav', 'pootlepress-sticky-nav' ), 
 				'std' => 'true',
 				'type' => 'checkbox'
