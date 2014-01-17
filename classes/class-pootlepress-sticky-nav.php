@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * - load_sticky_nav()
  */
 class Pootlepress_Sticky_Nav {
-	public $token = 'pootlepress-stick-nav';
+	public $token = 'pootlepress-sticky-nav';
 	public $version;
 	private $file;
 	private $_menu_style;
