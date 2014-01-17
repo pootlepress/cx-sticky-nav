@@ -91,6 +91,13 @@ function menuPackOptions($style) {
 			$navhiddenMargin	= "20px";
 			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
 		break;
+		case '#navigation_right_align':
+			$stickyStyle 		= "{position:'fixed','margin-top':'0px','width':'960px'}";
+			$normalStyle 		= "{position:'relative','min-height':'44px',left:'auto','margin-top':'0px','width':'auto'}";
+			$navhiddenHeight	= "44px";
+			$navhiddenMargin	= "3em";
+			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
+		break;
 		
 		default:
 			return false;
@@ -100,10 +107,22 @@ function menuPackOptions($style) {
 
 function stickyjs(){ 
 	$_menupackstyle = get_option('pootlepress-menu-pack-menu-style');
-	if ($_menupackstyle == '' || $_menupackstyle == 'none') $_navid = '#navigation';
-	else $_navid = '#navigation_'.$_menupackstyle;
+	$_rightalignenabled  = get_option('pootlepress-align-right-option');
+	
+	if ($_rightalignenabled == 'true') {
+		//Right Align
+		$_navid = '#navigation_right_align'; 
+	} else {
+		$_navid = '#navigation';
+		if ($_menupackstyle == '' || $_menupackstyle == 'none') $_navid = '#navigation';
+		else $_navid = '#navigation_'.$_menupackstyle;
+	}
 	if (is_array(menuPackOptions($_navid))) list($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin) = menuPackOptions($_navid);
 	
+	if ($_rightalignenabled == 'true') {
+		//Change the navid back to the original id
+		$_navid = '#navigation';
+	}
 	?>
 	<script type="text/javascript">
 	jQuery(function ($) {
@@ -127,6 +146,7 @@ function stickyjs(){
 					$(navid).css(<? echo $normalStyle; ?>);
 				}
 			}
+			
 			function stickyNavFull() {
 				var innerWidth = contentWidth-45;
 				if ($(window).scrollTop() > stickNavOffset) {
