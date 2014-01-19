@@ -50,7 +50,7 @@ function stickycss() { ?>
 function menuPackOptions($style) {
 	switch ($style) {
 		case '#navigation':
-			$stickyStyle 		= "{position:'fixed'}";
+			$stickyStyle 		= "{position:'fixed','min-height':'44px',left:'auto'}";
 			$normalStyle 		= "{position:'relative','min-height':'44px',left:'auto'}";
 			$navhiddenHeight	= "44px";
 			$navhiddenMargin	= "3em";
@@ -134,6 +134,9 @@ function stickyjs(){
 			var contentWidth;
 			contentWidth = $('#inner-wrapper').width();
 							
+			//Set some default styling on page load
+			$(navid).css(<? echo $normalStyle; ?>);
+			
 			function stickyNav() {
 				if ($(window).scrollTop() > stickNavOffset) {
 					//Sticky Nav
