@@ -144,7 +144,7 @@ class Pootlepress_Sticky_Nav {
 		if ($_stickyenabled == '') $enabled = 'true';
 		if ($_stickyenabled == 'true') {
 			add_action('wp_head', 'stickycss');
-			add_action('wp_footer', 'stickyjs');
+			add_action('wp_footer', 'stickyjs', 8);
 			add_action('woo_nav_before', 'navBefore');
 		}
 		if ($_wpadminbarhide == 'true') {
