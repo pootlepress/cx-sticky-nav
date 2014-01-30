@@ -138,8 +138,7 @@ function stickyjs(){
 			if ($(window).width() > 768) {
 				$(navid).css(<? echo $normalStyle; ?>);
 				console.log('yes '+$(window).width());
-			}
-			
+			}			
 			function stickyNav() {
 				if ($(window).scrollTop() > stickNavOffset) {
 					//Sticky Nav
@@ -169,6 +168,8 @@ function stickyjs(){
 				contentWidth = $('#inner-wrapper').width();
 				if ($(window).width() <= 768) {
 					//Mobile Nav CSS
+					 console.log('Mobile');
+					$('#nav-container').css({position: 'initial','min-height': '',left: ''});
 					$('#navigation').css({position: '','min-height': '',left: ''});
 				} else if (($(window).width() > 768)&&(contentWidth <= 960)) {
 					stickyNav();
