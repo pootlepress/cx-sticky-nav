@@ -162,13 +162,27 @@ function stickyjs(){
 					$('#nav-container').css({position:'relative','width':'100%','min-height':'44px',left:'auto'});
 				}
 			}
+			
+			function stickyNavBusiness() {
+				var innerWidth = 960;
+				if ($(window).scrollTop() > stickNavOffset) {
+					$('#navhidden').show();
+					$('#navigation').css({position:'fixed',width:innerWidth,'min-height':'44px',left:'50%',top:'0','z-index':99999,'margin-left':-innerWidth/2});
+				} else {
+					$('#navhidden').hide();
+					$('#navigation').css({position:'relative','width':'100%','min-height':'44px',left:'auto','margin-left':'auto'});
+				}
+			}
 
 			//This function is called in the user scrolls, or the window is resize
 			function resize() {
 				contentWidth = $('#inner-wrapper').width();
-				if ($(window).width() <= 768) {
+				navWidth	 = $('#navigation').width();
+				if ((contentWidth > 959)&&(navWidth < 961)) { //Business Slider Fix
+					stickyNavBusiness();
+				} else if ($(window).width() <= 768) {
 					//Mobile Nav CSS
-					 console.log('Mobile');
+					console.log('Mobile');
 					$('#nav-container').css({position: 'initial','min-height': '',left: ''});
 					$('#navigation').css({position: '','min-height': '',left: ''});
 				} else if (($(window).width() > 768)&&(contentWidth <= 960)) {
