@@ -137,7 +137,6 @@ function stickyjs(){
 			//Set some default styling on page load, if not mobile
 			if ($(window).width() > 768) {
 				$(navid).css(<? echo $normalStyle; ?>);
-				console.log('yes '+$(window).width());
 			}			
 			function stickyNav() {
 				if ($(window).scrollTop() > stickNavOffset) {
@@ -178,18 +177,20 @@ function stickyjs(){
 			function resize() {
 				contentWidth = $('#inner-wrapper').width();
 				navWidth	 = $('#navigation').width();
-				if ((contentWidth > 959)&&(navWidth < 961)) { //Business Slider Fix
+				console.log('navWidth:'+navWidth+' contentWidth:'+contentWidth);
+				if ($('#nav-container').length > 0) { 
+					//nav-container exists
+					stickyNavFull();
+				} else if ((contentWidth > 959)&&(navWidth < 961)) { //Business Slider Fix
 					stickyNavBusiness();
 				} else if ($(window).width() <= 768) {
 					//Mobile Nav CSS
 					console.log('Mobile');
 					$('#nav-container').css({position: 'initial','min-height': '',left: ''});
 					$('#navigation').css({position: '','min-height': '',left: ''});
-				} else if (($(window).width() > 768)&&(contentWidth <= 960)) {
+				} else {
 					stickyNav();
-				} else if (contentWidth > 959) {
-					stickyNavFull();
-				} 
+				}
 			}
 			
 			$(window).scroll(function() {
