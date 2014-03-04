@@ -11,6 +11,8 @@ Instructions
 
 Versions
 
+v1.0.5 - Updated fix for business slider full-width bug
+
 v1.0.4 - Fix issue with business slider full-width bug
 
 v1.0.3 - Fix issue with mobile nav on desktop resize
