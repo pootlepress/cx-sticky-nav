@@ -11,7 +11,7 @@ Instructions
 
 Versions
 
-v1.0.5 - Updated fix for business slider full-width bug
+v1.0.5 - Fix bug when sticky not working above 960px
 
 v1.0.4 - Fix issue with business slider full-width bug
 
