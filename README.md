@@ -11,6 +11,8 @@ Instructions
 
 Versions
 
+v1.0.6 - Fix bug with sticky nav displaying above lightboxes and modal boxes
+
 v1.0.5 - Fix bug when sticky not working above 960px
 
 v1.0.4 - Fix issue with business slider full-width bug

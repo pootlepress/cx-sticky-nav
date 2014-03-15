@@ -57,35 +57,35 @@ function menuPackOptions($style) {
 			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
 		break;
 		case '#navigation_top_tabs':
-			$stickyStyle 		= "{position:'fixed','z-index':'99999','background-color':'#fff',top:'0px',width:'100%','border-bottom':'7px solid white',left:'auto'}";
+			$stickyStyle 		= "{position:'fixed','z-index':'9999','background-color':'#fff',top:'0px',width:'100%','border-bottom':'7px solid white',left:'auto'}";
 			$normalStyle 		= "{position:'absolute','background-color':'inherit',top:'inherit',width:'inherit','border-bottom':'none',left:'275px'}";
 			$navhiddenHeight	= "0";
 			$navhiddenMargin	= "0";
 			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
 		break;
 		case '#navigation_header':
-			$stickyStyle 		= "{position:'fixed','z-index':'99999',top:'0px',width:'100%',left:'auto','height':'32px'}";
+			$stickyStyle 		= "{position:'fixed','z-index':'9999',top:'0px',width:'100%',left:'auto','height':'32px'}";
 			$normalStyle 		= "{position:'relative',top:'0',width:'inherit','height':'inherit'}";
 			$navhiddenHeight	= "32px";
 			$navhiddenMargin	= "20px";
 			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
 		break;	
 		case '#navigation_beautiful_type':
-			$stickyStyle 		= "{position:'fixed','z-index':'99999',top:'0px',width:'100%',left:'auto'}";
+			$stickyStyle 		= "{position:'fixed','z-index':'9999',top:'0px',width:'100%',left:'auto'}";
 			$normalStyle 		= "{position:'relative',top:'0',width:'inherit'}";
 			$navhiddenHeight	= "55px";
 			$navhiddenMargin	= "20px";
 			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
 		break;
 		case '#navigation_top_align':
-			$stickyStyle 		= "{position:'fixed','z-index':'99999',top:'0px',width:'100%',left:'auto',background:'#fff'}";
+			$stickyStyle 		= "{position:'fixed','z-index':'9999',top:'0px',width:'100%',left:'auto',background:'#fff'}";
 			$normalStyle 		= "{position:'relative',top:'0',width:'604px'}";
 			$navhiddenHeight	= "0";
 			$navhiddenMargin	= "0";
 			return array($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin);
 		break;	
 		case '#navigation_centred':
-			$stickyStyle 	= "{position:'fixed','z-index':'99999',top:'0px',width:'100%',left:'auto',background:'#FFF url(/wp-content/plugins/pootlepress-menu-pack/styles/images/stroke.gif) repeat-x 1px 29px'}";
+			$stickyStyle 	= "{position:'fixed','z-index':'9999',top:'0px',width:'100%',left:'auto',background:'#FFF url(/wp-content/plugins/pootlepress-menu-pack/styles/images/stroke.gif) repeat-x 1px 29px'}";
 			$normalStyle 	= "{position:'relative',top:'0',width:'inherit'}";
 			$navhiddenHeight	= "37px";
 			$navhiddenMargin	= "20px";
@@ -155,7 +155,7 @@ function stickyjs(){
 				var innerWidth = contentWidth-45;
 				if ($(window).scrollTop() > stickNavOffset) {
 					$('#navhidden').show();
-					$('#nav-container').css({position:'fixed',width:innerWidth,'min-height':'44px',left:'auto',top:'0','z-index':99999});
+					$('#nav-container').css({position:'fixed',width:innerWidth,'min-height':'44px',left:'auto',top:'0','z-index':9999});
 				} else {
 					$('#navhidden').hide();
 					$('#nav-container').css({position:'relative','width':'100%','min-height':'44px',left:'auto'});
@@ -166,7 +166,7 @@ function stickyjs(){
 				var innerWidth = 960;
 				if ($(window).scrollTop() > stickNavOffset) {
 					$('#navhidden').show();
-					$('#navigation').css({position:'fixed',width:innerWidth,'min-height':'44px',left:'50%',top:'0','z-index':99999,'margin-left':-innerWidth/2});
+					$('#navigation').css({position:'fixed',width:innerWidth,'min-height':'44px',left:'50%',top:'0','z-index':9999,'margin-left':-innerWidth/2});
 				} else {
 					$('#navhidden').hide();
 					$('#navigation').css({position:'relative','width':'100%','min-height':'44px',left:'auto','margin-left':'auto'});
