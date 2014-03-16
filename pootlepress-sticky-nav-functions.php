@@ -119,6 +119,8 @@ function stickyjs(){
 	}
 	if (is_array(menuPackOptions($_navid))) list($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin) = menuPackOptions($_navid);
 	
+	echo "navid: $_navid";
+	
 	if ($_rightalignenabled == 'true') {
 		//Change the navid back to the original id
 		$_navid = '#navigation';
@@ -126,7 +128,7 @@ function stickyjs(){
 	?>
 	<script type="text/javascript">
 	jQuery(function ($) {
-		$(document).ready(function() {		
+		$(document).ready(function() {
 			var navhiddenHeight = '<? echo $navhiddenHeight; ?>';
 			var navhiddenMargin = '<? echo $navhiddenMargin; ?>';
 			var navid = '<? echo $_navid; ?>';
@@ -191,8 +193,27 @@ function stickyjs(){
 				} else {
 					stickyNav();
 				}
+				
+				<?php
+				//If boxed layout is enabled, add border
+				$_boxedlayoutenabled = get_option('woo_layout_boxed');
+				
+				if ($_boxedlayoutenabled == 'true') {			
+					$_boxedlayoutoptions = get_option('woo_box_border_lr');
+					$_boxedlayoutwidth = $_boxedlayoutoptions['width'];
+					$_boxedlayoutstyle = $_boxedlayoutoptions['style'];
+					$_boxedlayoutcolor = $_boxedlayoutoptions['color'];
+					?>
+					
+					var boxedNavWidth = contentWidth+1;
+									
+					$('#navigation').css({'border-right':'<?php echo $_boxedlayoutwidth."px ".$_boxedlayoutstyle." ".$_boxedlayoutcolor; ?>','width':boxedNavWidth});		
+					
+				<?php
+				}				
+				?>
 			}
-			
+						
 			$(window).scroll(function() {
 				resize();
 			});
