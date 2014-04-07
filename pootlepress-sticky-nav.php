@@ -30,6 +30,6 @@ License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2
 	require_once( 'classes/class-pootlepress-sticky-nav.php' );
 
     $GLOBALS['pootlepress_sticky_nav'] = new Pootlepress_Sticky_Nav( __FILE__ );
-    $GLOBALS['pootlepress_sticky_nav']->version = '1.0.8';
+    $GLOBALS['pootlepress_sticky_nav']->version = '1.0.9';
 	
 ?>
