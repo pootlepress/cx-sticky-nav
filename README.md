@@ -11,6 +11,8 @@ Instructions
 
 Versions
 
+v1.0.8 - Fix "Weird statement at the bottom of pages . . .",  issue #11
+
 v1.0.7 - Fix Right border of primary nav disappearing on boxed layout
 
 v1.0.6 - Fix bug with sticky nav displaying above lightboxes and modal boxes

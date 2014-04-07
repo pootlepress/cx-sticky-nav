@@ -117,10 +117,9 @@ function stickyjs(){
 		if ($_menupackstyle == '' || $_menupackstyle == 'none') $_navid = '#navigation';
 		else $_navid = '#navigation_'.$_menupackstyle;
 	}
-	if (is_array(menuPackOptions($_navid))) list($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin) = menuPackOptions($_navid);
-	
-	echo "navid: $_navid";
-	
+	if (is_array(menuPackOptions($_navid))) 
+		list($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin) = menuPackOptions($_navid);
+		
 	if ($_rightalignenabled == 'true') {
 		//Change the navid back to the original id
 		$_navid = '#navigation';
