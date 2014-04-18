@@ -11,6 +11,8 @@ Instructions
 
 Versions
 
+v1.0.10 - Fix Sticky nav shifting left and right on scroll, issue #10 
+
 v1.0.9 - Fix Sticky nav jumping to the right in full width, issue #10 
 
 v1.0.8 - Fix "Weird statement at the bottom of pages . . .",  issue #11
