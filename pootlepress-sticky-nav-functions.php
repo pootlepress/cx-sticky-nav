@@ -155,13 +155,12 @@ function stickyjs(){
 			
 			function stickyNavFull() {
 				var innerWidth = contentWidth-45;
-				$('#navigation').css({ margin: 0 });		// added for v.1.0.11
 				if ($(window).scrollTop() > stickNavOffset) {
 					$('#navhidden').show();
-					$('#nav-container').css({position:'fixed',width: '100%','min-height':'44px',left:'auto',top:'0','z-index':9999});
+					$('#nav-container').css({position:'fixed',width: innerWidth,'min-height':'44px',left:'auto',top:'0','z-index':9999});
 				} else {
 					$('#navhidden').hide();
-					$('#nav-container').css({position:'relative','width':'100%','min-height':'44px',left:'auto'});
+					$('#nav-container').css({position:'relative','width': innerWidth,'min-height':'44px',left:'auto'});
 				}
 			}
 			

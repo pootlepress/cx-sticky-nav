@@ -11,6 +11,8 @@ Instructions
 
 Versions
 
+v1.1.1 - Fix Sticky nav navbar width (and auto margins) in full-width layout, issue #10 
+
 v1.1.0 - Fix Sticky nav left margin in full-width layout, issue #10 
 
 v1.0.10 - Fix Sticky nav shifting left and right on scroll, issue #10 
