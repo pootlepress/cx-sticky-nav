@@ -23,13 +23,13 @@ License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2
     along with this program; if not, write to the Free Software
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
-	
-    if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-	require_once( 'pootlepress-sticky-nav-functions.php' );
-	require_once( 'classes/class-pootlepress-sticky-nav.php' );
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-    $GLOBALS['pootlepress_sticky_nav'] = new Pootlepress_Sticky_Nav( __FILE__ );
-    $GLOBALS['pootlepress_sticky_nav']->version = '1.1.1';
-	
+require_once( 'pootlepress-sticky-nav-functions.php' );
+require_once( 'classes/class-pootlepress-sticky-nav.php' );
+
+$GLOBALS['pootlepress_sticky_nav'] = new Pootlepress_Sticky_Nav( __FILE__ );
+$GLOBALS['pootlepress_sticky_nav']->version = '1.1.1';
+
 ?>
