@@ -215,6 +215,7 @@ function stickyjs(){
                         stickyNav();
                     }
 
+
                     <?php
                     //If boxed layout is enabled, add border
                     $_boxedlayoutenabled = get_option('woo_layout_boxed');
@@ -228,7 +229,7 @@ function stickyjs(){
 
                     var boxedNavWidth = contentWidth+1;
 
-                    $('#navigation').css({'border-right':'<?php echo $_boxedlayoutwidth."px ".$_boxedlayoutstyle." ".$_boxedlayoutcolor; ?>','width':boxedNavWidth});
+                    $('#navigation').css({'border-right':'<?php echo $_boxedlayoutwidth."px ".$_boxedlayoutstyle." ".$_boxedlayoutcolor; ?>'});
 
                     <?php
                     }
