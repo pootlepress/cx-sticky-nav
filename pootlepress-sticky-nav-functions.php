@@ -126,7 +126,12 @@ function menuPackOptions($style) {
 }
 
 function stickyjs(){
-    $_menupackstyle = get_option('pootlepress-menu-pack-menu-style');
+    if (class_exists('Pootlepress_Menu_Pack')) {
+        $_menupackstyle = get_option('pootlepress-menu-pack-menu-style');
+    } else {
+        $_menupackstyle = '';
+    }
+
     $_rightalignenabled  = get_option('pootlepress-align-right-option');
 
     if ($_rightalignenabled == 'true') {
