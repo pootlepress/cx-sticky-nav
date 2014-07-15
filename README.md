@@ -11,6 +11,8 @@ Instructions
 
 Versions
 
+v1.1.3 - bug fixes for mobile menu and menu pack
+
 v1.1.2 - Fix mobile menu panel and add woo_options_add checking
 
 v1.1.1 - Fix Sticky nav navbar width (and auto margins) in full-width layout, issue #10 
