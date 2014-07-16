@@ -28,8 +28,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 require_once( 'pootlepress-sticky-nav-functions.php' );
 require_once( 'classes/class-pootlepress-sticky-nav.php' );
+require_once( 'classes/class-pootlepress-updater.php');
 
 $GLOBALS['pootlepress_sticky_nav'] = new Pootlepress_Sticky_Nav( __FILE__ );
 $GLOBALS['pootlepress_sticky_nav']->version = '1.1.3';
 
+add_action('init', 'pp_sn_updater');
+function pp_sn_updater()
+{
+    if (!function_exists('get_plugin_data')) {
+        include(ABSPATH . 'wp-admin/includes/plugin.php');
+    }
+    $data = get_plugin_data(__FILE__);
+    $wptuts_plugin_current_version = $data['Version'];
+    $wptuts_plugin_remote_path = 'http://jamiemarsland.staging.wpengine.com/updater';
+    $wptuts_plugin_slug = plugin_basename(__FILE__);
+    new Pootlepress_Updater ($wptuts_plugin_current_version, $wptuts_plugin_remote_path, $wptuts_plugin_slug);
+}
 ?>
