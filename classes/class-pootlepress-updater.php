@@ -68,7 +68,15 @@ if (!class_exists('Pootlepress_Updater')) {
                 $obj->slug = $this->slug;
                 $obj->new_version = $remote_version;
                 $obj->url = $this->update_path;
-                $obj->package = $this->update_path . "?plugin=" . urlencode($this->slug); // this is the value that will be used to download package
+
+                $idx = strpos($this->update_path, '?');
+                $s = '?';
+                if ($idx !== false) {
+                    $s = '&';
+                } else {
+                    $s = '?';
+                }
+                $obj->package = $this->update_path . $s . "plugin=" . urlencode($this->slug); // this is the value that will be used to download package
                 $transient->response[$this->plugin_slug] = $obj;
             }
 //            var_dump($transient);
@@ -99,6 +107,7 @@ if (!class_exists('Pootlepress_Updater')) {
         public function getRemote_version()
         {
             $request = wp_remote_post($this->update_path, array('body' => array('action' => 'version', 'plugin' => $this->slug)));
+
             if (!is_wp_error($request) || wp_remote_retrieve_response_code($request) === 200) {
                 return $request['body'];
             }
