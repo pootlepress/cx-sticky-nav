@@ -179,13 +179,13 @@ function stickyjs(){
                 }
 
                 function stickyNavFull() {
-                    var innerWidth = contentWidth-45;
+                    var innerWidth = contentWidth;
                     if ($(window).scrollTop() > stickNavOffset) {
                         $('#navhidden').show();
-                        $('#nav-container').css({position:'fixed',width: innerWidth,'min-height':'44px',left:'auto',top:'0','z-index':9999});
+                        $('#nav-container').css({'box-sizing': 'border-box', position:'fixed',width: innerWidth,'min-height':'44px',left:'auto',top:'0','z-index':9999});
                     } else {
                         $('#navhidden').hide();
-                        $('#nav-container').css({position:'relative','width': innerWidth,'min-height':'44px',left:'auto'});
+                        $('#nav-container').css({'box-sizing': 'border-box', position:'relative','width': innerWidth,'min-height':'44px',left:'auto'});
                     }
                 }
 
