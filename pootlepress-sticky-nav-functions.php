@@ -250,10 +250,10 @@ function stickyjs(){
             });
         });
 
-//        //Scroll to top. Prevents any browser caching scroll position
-//        window.onload = function () {
-//            window.scrollTo(0,0);
-//        };
+        //Scroll to top. Prevents any browser caching scroll position
+        window.onload = function () {
+            window.scrollTo(0,0);
+        };
     </script>
 <?php
 }
