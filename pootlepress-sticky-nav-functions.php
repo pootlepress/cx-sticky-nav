@@ -142,6 +142,10 @@ function stickyjs(){
         if ($_menupackstyle == '' || $_menupackstyle == 'none') $_navid = '#navigation';
         else $_navid = '#navigation_'.$_menupackstyle;
     }
+
+    // not using align right navid, as that cause problem on boxed layout, having 960px width on nav, overflowing the site container
+//    $_navid = '#navigation';
+
     if (is_array(menuPackOptions($_navid)))
         list($stickyStyle, $normalStyle, $navhiddenHeight, $navhiddenMargin) = menuPackOptions($_navid);
 
@@ -231,10 +235,11 @@ function stickyjs(){
                         $_boxedlayoutstyle = $_boxedlayoutoptions['style'];
                         $_boxedlayoutcolor = $_boxedlayoutoptions['color'];
                         ?>
+                    var boxBorderWidth = <?php echo $_boxedlayoutwidth ?>;
+                    var navWidth = 960 - boxBorderWidth * 2;
+//                    var boxedNavWidth = contentWidth+1;
 
-                    var boxedNavWidth = contentWidth+1;
-
-                    $('#navigation').css({'border-right':'<?php echo $_boxedlayoutwidth."px ".$_boxedlayoutstyle." ".$_boxedlayoutcolor; ?>'});
+                    $('#navigation').css({'width': navWidth + 'px'});
 
                     <?php
                     }
