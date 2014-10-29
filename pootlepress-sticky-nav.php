@@ -3,7 +3,7 @@
 Plugin Name: Canvas Extension - Sticky Nav
 Plugin URI: http://pootlepress.com/canvas-extensions/
 Description: An extension for WooThemes Canvas that makes the menu/navigation 'stick' at the top of the page.
-Version: 1.2
+Version: 1.2.1
 Author: PootlePress
 Author URI: http://pootlepress.com/
 License: GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
@@ -31,7 +31,7 @@ require_once( 'classes/class-pootlepress-sticky-nav.php' );
 require_once( 'classes/class-pootlepress-updater.php');
 
 $GLOBALS['pootlepress_sticky_nav'] = new Pootlepress_Sticky_Nav( __FILE__ );
-$GLOBALS['pootlepress_sticky_nav']->version = '1.2';
+$GLOBALS['pootlepress_sticky_nav']->version = '1.2.1';
 
 add_action('init', 'pp_sn_updater');
 function pp_sn_updater()
