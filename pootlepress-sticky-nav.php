@@ -28,6 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 require_once( 'pootlepress-sticky-nav-functions.php' );
 require_once( 'classes/class-pootlepress-sticky-nav.php' );
+require_once( 'classes/class-pootlepress-canvas-options.php' );
 require_once( 'classes/class-pootlepress-updater.php');
 
 $GLOBALS['pootlepress_sticky_nav'] = new Pootlepress_Sticky_Nav( __FILE__ );
