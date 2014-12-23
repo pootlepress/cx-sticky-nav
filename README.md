@@ -11,6 +11,11 @@ Instructions
 
 Versions
 
+23.12.2014 - Version 1.2.2
+ * Tweak - new add option method to add Sticky Nav heading in Canvas settings area
+ * Fix - issue with Revolution Slider
+ * Fix - style element causing errors
+ 
 29.10.2014 - Version 1.2.1
  * Fix - nav width in box layout
  * Fix - top nav goes under primary nav
