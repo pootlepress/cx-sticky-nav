@@ -213,8 +213,8 @@ function stickyjs(){
                     if ($(window).width() <= 768) {
                         //Mobile Nav CSS
                         console.log('Mobile');
-                        $('#nav-container').css({position: 'initial', 'min-height': '', left: ''});
-                        $('#navigation').css({position: '', 'min-height': '', left: ''});
+                        $('#nav-container').css({position: 'initial', 'min-height': '', left: '', width: '', 'margin-left': ''});
+                        $('#navigation').css({position: '', 'min-height': '', left: '', width: '', 'margin-left': ''});
                     } else if ($('#nav-container').length > 0) {
                         //nav-container exists
                         stickyNavFull();
@@ -239,7 +239,7 @@ function stickyjs(){
                     var navWidth = 960 - boxBorderWidth * 2;
 //                    var boxedNavWidth = contentWidth+1;
 
-                    $('#navigation').css({'width': navWidth + 'px'});
+//                    $('#navigation').css({'width': navWidth + 'px'});
 
                     <?php
                     }
