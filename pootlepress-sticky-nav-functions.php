@@ -188,13 +188,13 @@ function stickyjs(){
                         $('#navhidden').css({'min-height':navhiddenHeight,'margin-bottom':navhiddenMargin});
                         $('#navhidden').show();
                         $('#navigation').css(<?php echo $stickyStyle; ?>);
-                        $('#navigation').css({left: '50%', transform: ''});
-                        $('#navigation').attr('style', $('#navigation').attr('style') + ' transform: translateX(-50%) !important');
+                        $('#navigation').css({left: '50%', transform: '', '-webkit-transform': '', '-ms-transform': ''});
+                        $('#navigation').attr('style', $('#navigation').attr('style') + '-webkit-transform: translateX(-50%) !important; -ms-transform: translateX(-50%) !important; transform: translateX(-50%) !important');
                     } else {
                         //Normal Nav
                         $('#navhidden').hide();
                         $('#navigation').css(<?php echo $normalStyle; ?>);
-                        $('#navigation').css({left: '', transform: ''});
+                        $('#navigation').css({left: '', transform: '', '-webkit-transform': '', '-ms-transform': ''});
                     }
                 }
 
