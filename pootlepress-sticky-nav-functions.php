@@ -47,7 +47,7 @@ function stickycss() { ?>
             #nav-container {
                 display: block;
             }
-            #nav-container #navigation .menus {
+            #wrapper #navigation .menus {
                 float: initial;
             }
         }
