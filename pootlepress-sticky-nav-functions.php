@@ -47,6 +47,9 @@ function stickycss() { ?>
             #nav-container {
                 display: block;
             }
+            #nav-container #navigation .menus {
+                float: initial;
+            }
         }
 
         /* RESPONSIVE STYLES */
