@@ -11,13 +11,14 @@ Instructions
 
 Versions
 
+15.06.2015 - Version 1.2.4
+  * Fix - issue with nav location
+
 23.04.2015 - Version 1.2.3
 
  * Fix - full footer issue
  * Fix - safari compatability
  * Fix - alignment issue when layout set to 980px
- 
-
 
 23.12.2014 - Version 1.2.2
  * Tweak - new add option method to add Sticky Nav heading in Canvas settings area
